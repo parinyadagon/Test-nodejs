@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container>
+                    <center class="pt-12">
+                        <v-card width="400px">
+                            <v-row>
+                                <v-col> ชื่อ </v-col>
+                                <v-col> นามสกุล </v-col>
+                                <v-col> อายุ </v-col>
+                            </v-row>
+                            <v-row v-for="result in employees">
+                                <v-col>{{result.name}}</v-col>
+                                <v-col>{{result.lastname}}</v-col>
+                                <v-col>{{result.age}}</v-col>
+                            </v-row>
+                        </v-card>
+                    </center>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data: {
+                employees: [
+                    {
+                        name: "Wanwisa",
+                        lastname: "Sawatdee",
+                        age: 20,
+                    },
+                    {
+                        name: "Panee",
+                        lastname: "Tawan",
+                        age: 35,
+                    },
+                    {
+                        name: "Nuttanan",
+                        lastname: "Koonmin",
+                        age: 29,
+                    },
+                    {
+                        name: "Janjao",
+                        lastname: "kKhondon",
+                        age: 25,
+                    },
+                    {
+                        name: "Phumjai",
+                        lastname: "Fahkam",
+                        age: 33,
+                    },
+                    {
+                        name: "attama",
+                        lastname: "polawat",
+                        age: 30,
+                    },
+                    {
+                        name: "Wanrun",
+                        lastname: "Sasisan",
+                        age: 29,
+                    },
+                    {
+                        name: "Panuwat",
+                        lastname: "Nuntita",
+                        age: 34,
+                    },
+                    {
+                        name: "Ponlawat",
+                        lastname: "Khawjarern",
+                        age: 28,
+                    },
+                    {
+                        name: "Sawatdee",
+                        lastname: "Lowata",
+                        age: 23,
+                    },
+                    {
+                        name: "Adisorn",
+                        lastname: "Pornsawan",
+                        age: 30,
+                    },
+                    {
+                        name: "Bina",
+                        lastname: "Sara",
+                        age: 25,
+                    },
+                    {
+                        name: "Mullika",
+                        lastname: "Puwadit",
+                        age: 20,
+                    },
+                    {
+                        name: "Apichaya",
+                        lastname: "Ponsawan",
+                        age: 33,
+                    },
+                    {
+                        name: "Nuthapong",
+                        lastname: "Ponpom",
+                        age: 26,
+                    },
+                    {
+                        name: "Adithep",
+                        lastname: "Pongpun",
+                        age: 28,
+                    },
+                    {
+                        name: "Namwan",
+                        lastname: "Nita",
+                        age: 34,
+                    },
+                    {
+                        name: "Woradech",
+                        lastname: "Apinihan",
+                        age: 29,
+                    },
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
