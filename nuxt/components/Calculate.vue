@@ -1,31 +1,41 @@
 <template>
-  <div class="container">
-    <input
+  <div>
+    <button
       type="submit"
-      @press="getNumber(event)"
       name="calculate"
-      value="CALCULATE"
       class="btn btn-primary"
-    />
-    <fieldset class="border p-2">
+      @click.prevent="onSubmit"
+    >
+      CALCULATE
+    </button>
+    <fieldset class="border p-2 bg-light">
       <legend class="w-auto">result</legend>
-      <input-number />
-      <div>{{ number }}</div>
+      {{ result }}
     </fieldset>
   </div>
 </template>
 
 <script>
 export default {
-  method: {
-    getNumber(inputNumber) {
-      this.number = inputNumber
-    },
-  },
+  name: 'Calculate',
   data() {
     return {
-      number: '',
+      result: null,
     }
+  },
+  props: {
+    input: String,
+  },
+  methods: {
+    onSubmit() {
+      this.result = parseInt(this.input) / 100
+    },
   },
 }
 </script>
+
+<style scoped>
+div{
+  margin-top: 6px;
+}
+</style>

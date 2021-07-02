@@ -3,10 +3,15 @@
     <div class="row align-self-center w-100">
       <div class="col-6 mx-auto">
         <div class="jumbotron">
-          <form>
-            <input class="inputNumber" name="inputNumber" type="text" />
-            <Calculate />
-          </form>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Input Number"
+              v-model="form.inputNumber"
+            />
+          </div>
+          <Calculate :input="form.inputNumber" />
         </div>
       </div>
     </div>
@@ -24,12 +29,16 @@
 import Calculate from '@/components/Calculate'
 
 export default {
-  name: 'inputNumber',
-  mounted() {
-    this.$emit('press', name)
-  },
   components: {
     Calculate,
+  },
+
+  data() {
+    return {
+      form: {
+        inputNumber: null,
+      },
+    }
   },
 }
 </script>
